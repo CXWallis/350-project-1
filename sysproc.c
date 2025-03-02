@@ -89,3 +89,16 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+// Daniel: implemented exit2 (hopefully)
+int
+sys_exit2(void)
+{
+  int status;
+  if(argint(0, &status) < 0) // Took from sys_sbrk: Get integer argument (status)
+    return -1;
+
+  cprintf("Process exited with status: %d\n", status);
+  exit(); // Terminates current process
+  return 0; // Should never be reached
+}

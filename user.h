@@ -24,6 +24,9 @@ char* sbrk(int);
 int sleep(int);
 int uptime(void);
 
+// Daniel: added exit2
+int exit2(int status);
+
 // ulib.c
 int stat(char*, struct stat*);
 char* strcpy(char*, char*);
