@@ -30,5 +30,9 @@ SYSCALL(sbrk)
 SYSCALL(sleep)
 SYSCALL(uptime)
 
+SYSCALL(shutdown)
+SYSCALL(shutdown2)
+
+
 //Daniel: added exit2
 SYSCALL(exit2)	

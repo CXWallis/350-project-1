@@ -21,5 +21,9 @@
 #define SYS_mkdir  20
 #define SYS_close  21
 
+#define SYS_shutdown 22
+#define SYS_shutdown2 23
+
+
 //Daniel: added exit2
-#define SYS_exit2 22
+#define SYS_exit2 24

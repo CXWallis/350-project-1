@@ -24,6 +24,9 @@ char* sbrk(int);
 int sleep(int);
 int uptime(void);
 
+int shutdown(void);
+int shutdown2(char*);
+
 // Daniel: added exit2
 int exit2(int status);
 

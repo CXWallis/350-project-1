@@ -102,3 +102,20 @@ sys_exit2(void)
   exit(); // Terminates current process
   return 0; // Should never be reached
 }
+
+int
+sys_shutdown(void){
+  outw(0xB004, 0x0|0x2000);
+	outw(0x604, 0x0|0x2000);
+}
+
+int
+sys_shutdown2(char * msg){
+	if(argstr(0, &msg) < 0){
+		cprintf("SYSTEM SHUTTING DOWN...\n");
+	}
+	
+	cprintf("SYSTEM SHUTDOWN MESSAGE: %s\n", msg);
+	outw(0xB004, 0x0|0x2000);
+	outw(0x604, 0x0|0x2000);	
+}
